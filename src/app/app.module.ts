@@ -11,8 +11,12 @@ import {ProductAlertsComponent} from './product-alerts/product-alerts.component'
 import {ProductDetailsComponent} from './product-details/product-details.component';
 import {CartComponent} from './cart/cart.component';
 import { ShippingComponent } from './shipping/shipping.component';
+import {APP_BASE_HREF} from "@angular/common";
 
 @NgModule({
+    providers: [
+        {provide: APP_BASE_HREF, useValue: '/angular-jpcyth/'}
+    ],
     imports: [
         BrowserModule,
         HttpClientModule,
